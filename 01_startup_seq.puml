@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+activate StartupProvider
+StartupProvider -> StartupProvider: onCreate
+StartupProvider -> StartupInitializer: StartupInitializer
+StartupInitializer->SampleFourthStartup: discoverAndInitialize
+SampleFourthStartup->SampleFourthStartup: doInitialize
+StartupInitializer --> StartupProvider: return StartupProviderStore
+StartupProvider -> StartupManager: build
+StartupManager -> StartupManager: start
+StartupManager -> StartupProvider: await
+deactivate StartupProvider
+
+@enduml

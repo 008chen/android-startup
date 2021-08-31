@@ -22,6 +22,7 @@ class SampleSecondStartup : AndroidStartup<Boolean>() {
         return true
     }
 
+    //如果定义的组件没有运行在主线程，那么可以通过该方法进行控制运行的子线程
     override fun createExecutor(): Executor {
         return ExecutorManager.instance.cpuExecutor
     }

@@ -12,12 +12,16 @@ import kotlin.math.min
  */
 class ExecutorManager {
 
+
+//    cpu使用频率高，高速计算；核心线程池的大小与cpu核数相关
     var cpuExecutor: ThreadPoolExecutor
         private set
 
+//    io操作，网络处理等；内部使用缓存线程池。
     var ioExecutor: ExecutorService
         private set
 
+//    主线程
     var mainExecutor: Executor
         private set
 

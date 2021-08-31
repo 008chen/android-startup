@@ -15,6 +15,7 @@ internal object ProcessUtils {
         val myPid = Process.myPid()
         am.runningAppProcesses.forEach {
             if (it.pid == myPid) {
+                StartupLogUtils.d("ProcessName: ${it.processName}")
                 return it.processName
             }
         }

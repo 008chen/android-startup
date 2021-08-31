@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+activate StartupManager
+StartupManager -> mDefaultManagerDispatcher: dispatch
+mDefaultManagerDispatcher -> StartupRunnable: new and run
+
+
+deactivate StartupManager
+
+@enduml

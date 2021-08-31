@@ -7,12 +7,12 @@ package com.rousetime.android_startup.dispatcher
 interface Dispatcher {
 
     /**
-     * Return true call the create function on main thread otherwise false.
+     * 用来控制create()方法调时所在的线程，返回true代表在主线程执行.
      */
     fun callCreateOnMainThread(): Boolean
 
     /**
-     * Return true block the main thread until the startup completed otherwise false.
+     * 用来控制当前初始化的组件是否需要在主线程进行等待其完成。如果返回true，将在主线程等待，并且阻塞主线程.
      *
      * Note: If the function [callCreateOnMainThread] return true, main thread default block.
      */

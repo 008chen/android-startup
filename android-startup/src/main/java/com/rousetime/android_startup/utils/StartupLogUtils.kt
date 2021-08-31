@@ -11,7 +11,7 @@ import java.util.*
 internal object StartupLogUtils {
 
     private const val TAG = "StartupTrack"
-    var level: LoggerLevel = LoggerLevel.NONE
+    var level: LoggerLevel = LoggerLevel.DEBUG
 
     fun e(message: String) {
         if (level >= LoggerLevel.ERROR) print(Log.ERROR, TAG, message)

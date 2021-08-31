@@ -1,6 +1,7 @@
 package com.rousetime.sample.startup
 
 import android.content.Context
+import android.util.Log
 import com.rousetime.android_startup.AndroidStartup
 
 /**
@@ -14,6 +15,7 @@ class SampleFirstStartup : AndroidStartup<String>() {
     override fun waitOnMainThread(): Boolean = false
 
     override fun create(context: Context): String? {
+        Log.d("startuptest","SampleFirstStartup:${this.javaClass.simpleName}")
         return this.javaClass.simpleName
     }
 

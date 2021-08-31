@@ -28,6 +28,7 @@ abstract class AndroidStartup<T> : Startup<T> {
 
     override fun createExecutor(): Executor = ExecutorManager.instance.ioExecutor
 
+    //在执行之前不需要依赖其它组件
     override fun dependencies(): List<Class<out Startup<*>>>? {
         return null
     }

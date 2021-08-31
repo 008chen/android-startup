@@ -26,6 +26,7 @@
             android:name=".MultipleProcessService"
             android:process=":multiple.process.service" />
 
+<!--        第一种初始化方法是在Manifest中进行自动配置。-->
         <provider
             android:name="com.rousetime.android_startup.provider.StartupProvider"
             android:authorities="${applicationId}.android_startup"

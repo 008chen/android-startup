@@ -34,8 +34,10 @@ class SampleApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
+//        第二种初始化方法是在Application进行手动配置
 //        val config = StartupConfig.Builder()
 //            .setLoggerLevel(LoggerLevel.DEBUG)
+////        主线程的超时等待时间，即阻塞的最长时间
 //            .setAwaitTimeout(12000L)
 //            .setListener(object : StartupListener {
 //                override fun onCompleted(totalMainThreadCostTime: Long, costTimesModels: List<CostTimesModel>) {

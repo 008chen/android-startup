@@ -11,20 +11,19 @@ import com.rousetime.android_startup.executor.StartupExecutor
 interface Startup<T> : Dispatcher, StartupExecutor {
 
     /**
-     * Contains all of the necessary operations to initialize the component.
-     * and returns an instance of `T`
+     * 组件初始化方法，执行需要处理的初始化逻辑，支持返回一个T类型的实例
      *
      * @param [context]
      */
     fun create(context: Context): T?
 
     /**
-     * Returns a list of the other [Startup] objects that the initializer depends on.
+     * 返回Startup<*>类型的list集合。用来表示当前组件在执行之前需要依赖的组件.
      */
     fun dependencies(): List<Class<out Startup<*>>>?
 
     /**
-     * Called whenever there is a dependency completion.
+     * 该方法会在每一个依赖执行完毕之后进行回调.
      *
      * @param [startup] dependencies [startup].
      * @param [result] of dependencies startup.

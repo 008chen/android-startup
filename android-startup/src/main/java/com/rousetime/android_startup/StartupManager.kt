@@ -72,7 +72,8 @@ class StartupManager private constructor(
     }
 
     private fun execute(sortStore: StartupSortStore) {
-        sortStore.result.forEach { mDefaultManagerDispatcher.dispatch(it, sortStore) }
+        sortStore.result.forEach {
+            mDefaultManagerDispatcher.dispatch(it, sortStore) }
     }
 
     /**

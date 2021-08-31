@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+activate StartupManager
+StartupManager -> TopologySort: start
+TopologySort -> StartupSortStore: sort
+TopologySort-->StartupManager: StartupSortStore
+StartupManager ->StartupManager: StartupManagerDispatcher.prepare
+StartupManager ->StartupManager: execute(StartupSortStore)
+
+deactivate StartupManager
+
+@enduml
