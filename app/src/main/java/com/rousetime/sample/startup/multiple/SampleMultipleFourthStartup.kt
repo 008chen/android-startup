@@ -5,8 +5,7 @@ import com.rousetime.android_startup.AndroidStartup
 import com.rousetime.android_startup.annotation.MultipleProcess
 
 /**
- * Created by idisfkj on 2020/9/15.
- * Email: idisfkj@gmail.com.
+ * 指定了初始化所在的进程名称:multiple.process.service与:multiple.test
  */
 @MultipleProcess(":multiple.process.service", ":multiple.test")
 class SampleMultipleFourthStartup : AndroidStartup<String>() {
